@@ -1,0 +1,20 @@
+/* Universal Selector */
+/* resetting */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; /*it forces the inheritance */
+}
+
+/* root */
+html {
+  // THis defines what 1rem is
+  font-size: 62.5%;
+}
+
+/* For inheritance: they will be all inherited to child element */
+body {
+  box-sizing: border-box;
+}

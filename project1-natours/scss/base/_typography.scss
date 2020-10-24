@@ -1,0 +1,39 @@
+/* For inheritance: they will be all inherited to child element */
+body {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  /* font-size: 16px; */
+  line-height: 1.7;
+  color: $color-gray-dark;
+  padding: 3rem; /* (top right bottom left) It will not get inherited. It is only for the body element */
+}
+
+.heading-primary {
+  color: $color-white;
+  text-transform: uppercase;
+  backface-visibility: hidden; /* Determines if the back part of an element eg. transform is visible or hidden */
+  margin-bottom: 6rem;
+
+  &--main {
+    display: block; /* block basically occupies entire width available to it and created line-break before and after them */
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    animation-name: moveInLeft; /* animation name */
+    animation-duration: 3s; /* time taken for an animation */
+    animation-timing-function: ease-out; /* it specifies the speed curve of an animation */
+
+    /* 
+        animation-iteration-count: 3;
+        animation-delay: 1s;
+         */
+  }
+
+  &--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.75rem;
+    animation: moveInRight 1s ease-in-out; /* animation-name animation-delay animation-timing-function: */
+  }
+}

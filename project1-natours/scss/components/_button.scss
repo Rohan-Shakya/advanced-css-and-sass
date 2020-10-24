@@ -1,0 +1,64 @@
+.btn {
+  &:link, &:visited /* Pseudo Class */ {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem; /* top-bottom left-right */
+    display: inline-block; /* displayed as an inline element but can be styled as a block level element*/
+    border-radius: 10rem;
+    transition: all 0.2s ease-in-out;
+    /* 
+            another animation property(simplest one) 
+            all stands for all properties will get transition effect transition-duration 
+            transition-timing-function 
+            */
+    position: relative;
+    font-size: 1.6rem;
+  }
+
+  &:hover {
+    transform: translateY(-0.3rem);
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.2); /* x-axis y-axis blur color */
+
+    &::after {
+      transform: scaleX(1.4) scaleY(1.6); /* scale will increase an entire element, scale(2) means double of an actual element */
+      opacity: 0; /* it will sets an element as invisible*/
+    }
+  }
+  &:active {
+    transform: translateY(
+      -0.1rem
+    ); /* It is in relation to initial state not hover state */
+    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+  }
+
+  &--white {
+    background-color: $color-white;
+    color: $color-gray-dark;
+
+    &::after {
+      background-color: $color-white;
+    }
+  }
+  &::after {
+    /* It is now treated as the child of actual button */
+    content: ''; /* always required */
+    display: inline-block;
+    height: 100%; /* 100% height of actual button */
+    width: 100%; /* 100% width of actual button */
+    border-radius: 10rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    /* 
+        z-index property specifies the stack order of an element.
+        Here, -1 so it is behind the actual button
+        */
+    transition: all 0.4s;
+  }
+
+  &--animated {
+    animation: moveInBottom 0.5s ease-out 0.75s;
+    animation-fill-mode: backwards; /* It will automatically apply the style of 0% before the animation starts */
+  }
+}
