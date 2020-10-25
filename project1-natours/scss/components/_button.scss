@@ -39,6 +39,15 @@
       background-color: $color-white;
     }
   }
+
+  &--green {
+    background-color: $color-primary;
+    color: $color-white;
+
+    &::after {
+      background-color: $color-primary;
+    }
+  }
   &::after {
     /* It is now treated as the child of actual button */
     content: ''; /* always required */
