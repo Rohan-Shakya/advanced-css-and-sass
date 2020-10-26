@@ -5,7 +5,7 @@
       rgba($color-primary-light, 0.8),
       rgba($color-primary-dark, 0.8)
     ),
-    url(../img/hero.jpg); /* two images => one is gradient color and below that actual image */
+    url(../img/hero-small.jpg); /* two images => one is gradient color and below that actual image */
   background-size: cover; /* to cover the available width */
   background-position: top; /* to always position our image to top */
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
@@ -17,6 +17,19 @@
   ); /* clipping only needed portion => (left top, right top, right bottom , left bottom) */
   position: relative; /* It will not affect the position but will be reference to its child element */
 
+  @media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary-light, 0.8),
+        rgba($color-primary-dark, 0.8)
+      ),
+      url(../img/hero.jpg);
+  }
+
+  @include respond(phone) {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+  }
   &__logo-box /* same as .header__logo-box */ {
     position: absolute; /* It basically reference to its parent element and then we can add top, left, right, position */
     top: 4rem;

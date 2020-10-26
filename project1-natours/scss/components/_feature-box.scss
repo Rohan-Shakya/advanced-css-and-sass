@@ -6,6 +6,11 @@
   border-radius: 3px;
   box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
   transition: transform 0.3s;
+
+  @include respond(tap-port) {
+    padding: 2rem;
+  }
+
   &__icon {
     font-size: 6rem;
     margin-bottom: 0.5rem;
@@ -17,6 +22,10 @@
     );
     -webkit-background-clip: text;
     color: transparent;
+
+    @include respond(tap-port) {
+      margin-bottom: 0;
+    }
   }
 
   &:hover {
