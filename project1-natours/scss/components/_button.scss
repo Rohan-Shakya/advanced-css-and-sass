@@ -1,4 +1,5 @@
 .btn {
+  &,
   &:link, &:visited /* Pseudo Class */ {
     text-transform: uppercase;
     text-decoration: none;
@@ -13,6 +14,10 @@
           */
     position: relative;
     font-size: $default-font-size;
+
+    // Change for the <button> element
+    border: none;
+    cursor: pointer;
   }
 
   &:hover {
@@ -24,7 +29,9 @@
       opacity: 0; /* it will sets an element as invisible*/
     }
   }
-  &:active {
+  &:active,
+  &:focus {
+    outline: none;
     transform: translateY(
       -0.1rem
     ); /* It is in relation to initial state not hover state */
