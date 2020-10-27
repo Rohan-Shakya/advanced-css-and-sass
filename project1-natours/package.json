@@ -1,14 +1,29 @@
 {
   "name": "natours",
   "version": "1.0.0",
-  "description": "Natours | Exciting tours for adventurous people",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "node-sass ./scss/main.scss ./css/style.css -w"
+    "sass": "node-sass ./scss/main.scss ./css/style.css -w",
+    "devServer": "live-server",
+    "start": "npm-run-all --parallel devServer sass",
+    "compile": "node-sass ./scss/main.scss ./css/style.comp.css",
+    "concat": "concat -o ./css/style.concat.css ./css/icon-font.css ./css/style.comp.css",
+    "prefix": "postcss --use autoprefixer -b 'last 10 versions' ./css/style.concat.css -o ./css/style.prefix.css",
+    "compress": "node-sass css/style.prefix.css css/style.css --output-style compressed",
+    "build": "npm-run-all compile concat prefix compress"
   },
-  "author": "Rohan Shakya",
-  "license": "MIT",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "dependencies": {
     "node-sass": "^4.14.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.0.1",
+    "concat": "^1.0.3",
+    "live-server": "^1.2.1",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^4.1.1"
   }
 }
