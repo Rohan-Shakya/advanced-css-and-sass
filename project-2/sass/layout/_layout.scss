@@ -6,7 +6,31 @@
   min-height: 50rem;
 }
 
+.header {
+  font-size: 1.4rem;
+  height: 7rem;
+  background-color: #fff;
+  border-bottom: var(--color-grey-light-2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .content {
   // flex container
   display: flex;
+}
+
+.sidebar {
+  background-color: var(--color-grey-dark-1);
+  flex: 0 0 18%; // (flex-grow flex-shrink flex-basis)
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hotel-view {
+  background-color: orangered;
+  flex: 1; // flex-grow: 1; (grow as much as it can)
+  height: 80rem;
 }
