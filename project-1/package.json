@@ -1,8 +1,8 @@
 {
   "name": "natours",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+    "description": "Landing page for natours",
+  "main": "server.js",
   "scripts": {
     "sass": "node-sass ./scss/main.scss ./css/style.css -w",
     "devServer": "live-server",
