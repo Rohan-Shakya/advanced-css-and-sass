@@ -1,0 +1,89 @@
+/* For inheritance: they will be all inherited to child element */
+body {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  /* font-size: 16px; */
+  line-height: 1.7;
+  color: $color-gray-dark;
+}
+
+.heading-primary {
+  color: $color-white;
+  text-transform: uppercase;
+  backface-visibility: hidden; /* Determines if the back part of an element eg. transform is visible or hidden */
+  margin-bottom: 6rem;
+
+  &--main {
+    display: block; /* block basically occupies entire width available to it and created line-break before and after them */
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    animation-name: moveInLeft; /* animation name */
+    animation-duration: 3s; /* time taken for an animation */
+    animation-timing-function: ease-out; /* it specifies the speed curve of an animation */
+
+    /* 
+      animation-iteration-count: 3;
+      animation-delay: 1s;
+       */
+
+    @include respond(phone) {
+      letter-spacing: 1rem;
+      font-size: 5rem;
+    }
+  }
+
+  &--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.75rem;
+    animation: moveInRight 1s ease-in-out; /* animation-name animation-delay animation-timing-function: */
+
+    @include respond(phone) {
+      letter-spacing: 0.5rem;
+    }
+  }
+}
+
+.heading-secondary {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline-block;
+  background-image: linear-gradient(
+    to right,
+    $color-primary-light,
+    $color-primary-dark
+  );
+  -webkit-background-clip: text; /* for text gradient color */
+  color: transparent;
+  letter-spacing: 0.2rem;
+  transition: all 0.2s;
+
+  @include respond(tab-port) {
+    font-size: 2rem;
+  }
+
+  @include respond(phone) {
+    font-size: 2.5rem;
+  }
+
+  &:hover {
+    transform: skewY(2deg) skewX(15deg);
+    text-shadow: 0.5rem 1rem 2rem rgba($color-black, 0.2); /* text shadow (x-axis, y-axis, blur, color) */
+  }
+}
+
+.heading-tertiary {
+  font-size: $default-font-size;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.paragraph {
+  font-size: $default-font-size;
+  &:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+}
