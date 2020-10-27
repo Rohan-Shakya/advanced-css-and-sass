@@ -1,3 +1,17 @@
+// Abstracts
 @import './abstracts/variables';
+@import './abstracts/mixins';
+@import './abstracts/functions';
+
+// Base
+@import './base/typography';
+@import './base/animation';
 @import './base/base';
+@import './base/utility';
+@import './layout/layout';
+
+// Component
+@import './component/buttons';
+
+// Layout
 @import './layout/layout';
