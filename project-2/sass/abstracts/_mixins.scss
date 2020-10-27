@@ -1,0 +1,17 @@
+@mixin posAbsLeft($top, $left) {
+  position: absolute;
+  top: $top;
+  left: $left;
+}
+
+@mixin posAbsRight($top, $right) {
+  position: absolute;
+  top: $top;
+  right: $right;
+}
+
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
