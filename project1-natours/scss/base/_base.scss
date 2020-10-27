@@ -41,3 +41,9 @@ body {
     padding: 0;
   }
 }
+
+::selection {
+  // Change while selection
+  background-color: $color-primary;
+  color: $color-white;
+}
