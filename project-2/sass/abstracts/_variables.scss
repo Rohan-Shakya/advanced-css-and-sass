@@ -11,4 +11,12 @@
   --color-grey-dark-2: #777;
   --color-grey-dark-3: #999;
   --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+  --shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.16);
+  --line: 1px solid var(--color-grey-light-2);
 }
+
+$bg-largest: 75em; // 1200px = 75em
+$bp-large: 60.75em; // 1100px = 60.75em
+$bp-medium: 56.25em; // 900px
+$bp-small: 37.5em; // 600px
+$bp-smallest: 31.25em; //500px
